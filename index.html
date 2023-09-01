@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Calculator</title>
+    <link rel="icon" type="image/x-icon" href="./assets/logo-calculator.PNG">
+</head>
+
+<body>
+    <div class="video-wrapper">
+        <video playsinline autoplay muted loop>
+            <source src="./assets//bg-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <header>CALCULATOR</header>
+    <div id="calculator">
+        <input type="text" id="result" disabled>
+        <div>
+            <button class="button" onclick="appendToResult('7')">7</button>
+            <button class="button" onclick="appendToResult('8')">8</button>
+            <button class="button" onclick="appendToResult('9')">9</button>
+            <button class="button" onclick="operate('+')">+</button>
+        </div>
+        <div>
+            <button class="button" onclick="appendToResult('4')">4</button>
+            <button class="button" onclick="appendToResult('5')">5</button>
+            <button class="button" onclick="appendToResult('6')">6</button>
+            <button class="button" onclick="operate('-')">-</button>
+        </div>
+        <div>
+            <button class="button" id="one" onclick="appendToResult('1')">1</button>
+            <button class="button" onclick="appendToResult('2')">2</button>
+            <button class="button" onclick="appendToResult('3')">3</button>
+            <button class="button" onclick="operate('*')">*</button>
+        </div>
+        <div>
+            <button class="button" onclick="appendToResult('0')">0</button>
+            <button class="button" onclick="calculate()">=</button>
+            <button class="button" onclick="operate('.')">.</button>
+            <button class="button" onclick="operate('/')">/</button>
+        </div>
+        <div>
+            <button class="button" onclick="sliceResult()">Del</button>
+            <button class="button" onclick="clearResult()">AC</button>
+            <button class="button" onclick="calculateSquareRoot()">^</button>
+            <button class="button" onclick="operate('/')">x/y</button>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
