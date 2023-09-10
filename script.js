@@ -12,7 +12,11 @@ function clearResult() {
 
 function calculate() {
     try {
-        const expression = document.getElementById('result').value;
+        let expression = document.getElementById('result').value;
+
+        // Replace % with / 100 for percentage calculations
+        expression = expression.replace(/%/g, '/100');
+
         const result = eval(expression);
         document.getElementById('result').value = result;
     } catch (error) {
@@ -25,6 +29,5 @@ function sliceResult() {
     if (inputValue.length > 0) {
         const slicedValue = inputValue.slice(0, -1); // Slice all characters except the last one
         document.getElementById('result').value = slicedValue;
+    }
 }
-}
-
